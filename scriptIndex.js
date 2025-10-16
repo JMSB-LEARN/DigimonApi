@@ -47,6 +47,10 @@ function crearCarta(digimon) {
   nombreDigimon.textContent = digimon.name;
   contenedorCarta.appendChild(nombreDigimon);
 
+  contenedorCarta.addEventListener('click', () => {
+      window.location.href = `details.html?id=${digimon.id}`;
+    });
+
   return contenedorCarta;
 }
 
